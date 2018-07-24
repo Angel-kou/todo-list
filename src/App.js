@@ -53,6 +53,28 @@ class App extends Component {
     });
   };
 
+  changeEditStatus = changeItem => {
+    this.state.list.forEach(item => {
+      if (item.id === changeItem.id) {
+        item.readOnly = false;
+      }
+    });
+    this.setState({
+      list: this.state.list
+    });
+  };
+
+  changeItemsValue = (changeItem, value) => {
+    this.state.list.forEach(item => {
+      if (item.id === changeItem.id) {
+        item.name = value;
+      }
+    });
+    this.setState({
+      list: this.state.list
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -71,12 +93,13 @@ class App extends Component {
                 item={item}
                 finishedChange={this.updateFinished}
                 key={item.id}
+                isDisabled={this.changeEditStatus}
+                changeItemValue={this.changeItemsValue}
               />
             ))}
           </ul>
           <Dialog addNewTask={this.addTask} nums={this.state.list.length} />
         </div>
-        }
       </div>
     );
   }

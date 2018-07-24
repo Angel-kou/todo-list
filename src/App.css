@@ -49,7 +49,7 @@ h3 {
   transform: translateY(-50%);
 }
 
-input[type="text"] {
+input[type='text'] {
   line-height: 40px;
   float: right;
   width: 80%;
@@ -63,9 +63,9 @@ input[type="text"] {
   box-shadow: 0 0 10px #ccc;
 }
 
-input[type="button"] {
+input[type='button'] {
   border: none;
-  background-color: #A1EAFB;
+  background-color: #a1eafb;
   height: 40px;
   width: 110px;
   font-size: 18px;
@@ -110,20 +110,19 @@ ul li:hover > .delete-btn {
 }
 
 .check-btn {
-  width: 13px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
   display: inline-block;
   border: 1px #ccc solid;
   border-style: outset;
   border-radius: 5px;
-  margin-right: 20px;
   cursor: pointer;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   border: 0;
   color: #fff;
-  background-color: #A1EAFB;
+  background-color: #a1eafb;
 }
 
 @media screen and (max-width: 767px) {
@@ -136,9 +135,11 @@ input[type="checkbox"] {
   }
 }
 
-
-
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
